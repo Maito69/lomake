@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <title>Rekisteröitymislomake</title>
+  <style>
+    .error {
+      color: red;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Rekisteröitymislomake</h1>
+  <p><strong>Siirry kentästä toiseen tab-näppäimellä.</strong></p>
+
+  <form id="registerForm">
+    Käyttäjä ID: <input type="text" id="userId"><span class="error" id="userIdError"></span><br><br>
+    Salasana: <input type="password" id="password"><span class="error" id="passwordError"></span><br><br>
+    Nimi: <input type="text" id="name"><span class="error" id="nameError"></span><br><br>
+    Osoite: <input type="text" id="address"><span class="error" id="addressError"></span><br><br>
+    Maa: 
+    <select id="country">
+      <option value="">(Valitse maa)</option>
+      <option value="FI">Suomi</option>
+      <option value="SE">Ruotsi</option>
+    </select>
+    <span class="error" id="countryError"></span><br><br>
+    Postinumero: <input type="text" id="postal"><span class="error" id="postalError"></span><br><br>
+    Sähköposti: <input type="text" id="email"><span class="error" id="emailError"></span><br><br>
+    Sukupuoli:
+    <input type="radio" name="gender" value="Mies">Mies
+    <input type="radio" name="gender" value="Nainen">Nainen
+    <span class="error" id="genderError"></span><br><br>
+    Kieli:
+    <input type="checkbox" name="language" value="suomi" checked>Suomi
+    <input type="checkbox" name="language" value="muu">Muu kuin suomi<br><br>
+    Lisätietoja:<br>
+    <textarea rows="5" cols="40"></textarea><br><br>
+    <button type="submit">Lähetä</button>
+  </form>
+
+  <script src="lomake.js"></script>
+</body>
+</html>
